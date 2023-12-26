@@ -6,14 +6,21 @@ namespace HospitalInformationSystem.Services;
 public class MedicalRecordService : IMedicalRecordService
 {
     private readonly List<MedicalRecord> records;
+    private readonly DoctorService doctorService;
+    private readonly PatientService patientService;
 
-    public MedicalRecordService()
+    public MedicalRecordService(DoctorService doctorService, PatientService patientService)
     {
+        this.doctorService = doctorService;
+        this.patientService = patientService;
         this.records = new List<MedicalRecord>();
     }
 
     public MedicalRecord Add(MedicalRecord record)
     {
+        var doctor = doctorService.GetById(record.DoctorId);
+        var patient = patientService.GetById(record.PatientId);
+
         records.Add(record);
         return record;
     }

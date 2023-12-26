@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using HospitalInformationSystem.Menus;
 
-//DateAndTime dateAndTime = new(1, 1, 1);
-
-Console.WriteLine();
+MainMenu mainMenu = new MainMenu();
+mainMenu.Main();

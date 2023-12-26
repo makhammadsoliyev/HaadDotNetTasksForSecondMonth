@@ -10,7 +10,7 @@ public class MedicalRecord
 
     public int Id { get; set; }
     public string MedicalConditions { get; set; }
-    public string Medications { get; set;}
+    public string Medications { get; set; }
     public string TestResults { get; set; }
     public string TreatmentPlans { get; set; }
     public int PatientId { get; set; }

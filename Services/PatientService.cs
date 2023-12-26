@@ -30,7 +30,7 @@ public class PatientService : IPatientService
         return patients.Remove(patient);
     }
 
-    public List<Patient> FindAllByAge(int age)
+    public List<Patient> FindAllByAge(uint age)
         => patients.Where(p => DateTime.Now.Year - p.DateOfBirth.Year == age).ToList();
 
     public List<Patient> FindAllByName(string name)

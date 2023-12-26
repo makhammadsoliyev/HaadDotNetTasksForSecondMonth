@@ -32,7 +32,7 @@ public class DoctorService : IDoctorService
     }
 
     public List<Doctor> GetAll()
-        => doctors;        
+        => doctors;
 
     public List<Doctor> GetAllByName(string name)
         => doctors.Where(d => $"{d.FirstName} {d.LastName}".Equals(name)).ToList();

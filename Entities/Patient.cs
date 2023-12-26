@@ -1,5 +1,4 @@
 ﻿using HospitalInformationSystem.Enums;
-using Microsoft.VisualBasic;
 
 namespace HospitalInformationSystem.Entities;
 
@@ -16,7 +15,7 @@ public class Patient
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public DateOnly DateOfBirth { get; set; }
-    public Gender Gender { get; set; } 
+    public Gender Gender { get; set; }
     public string Phone { get; set; }
     public string Address { get; set; }
     public string MedicalHistory { get; set; }
