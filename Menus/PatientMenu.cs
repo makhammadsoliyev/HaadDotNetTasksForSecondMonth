@@ -20,11 +20,11 @@ public class PatientMenu
         string firstName = AnsiConsole.Ask<string>("[blue]FirstName: [/]");
         string lastName = AnsiConsole.Ask<string>("[cyan2]LastName: [/]");
         DateOnly dateOfBirth = AnsiConsole.Ask<DateOnly>("[cyan2]DateOfBirth(dd/mm/yyyy)): [/]");
-        int gender = AnsiConsole.Ask<int>("[yellow]Gender: [/]");
-        while (gender != 0 || gender != 1)
+        string gender = AnsiConsole.Ask<string>("[yellow]Gender(0. Male, 1. Female): [/]");
+        while (gender != "0" && gender != "1")
         {
             AnsiConsole.MarkupLine("[red]Invalid input.[/]");
-            gender = AnsiConsole.Ask<int>("[yellow]Gender: [/]");
+            gender = AnsiConsole.Ask<string>("[yellow]Gender(0. Male, 1. Female): [/]");
         }
         string phone = AnsiConsole.Ask<string>("[cyan1]Phone(+998XXxxxxxxx): [/]");
         while (!Regex.IsMatch(phone, @"^\+998\d{9}$"))
@@ -33,7 +33,7 @@ public class PatientMenu
             phone = AnsiConsole.Ask<string>("[cyan1]Phone(+998XXxxxxxxx): [/]");
         }
         string address = AnsiConsole.Ask<string>("[cyan3]Address: [/]");
-        string medicalHistory = AnsiConsole.Ask<string>("[blue]Address: [/]");
+        string medicalHistory = AnsiConsole.Ask<string>("[blue]MedicalHistory: [/]");
 
         var patient = new Patient()
         {
@@ -41,7 +41,7 @@ public class PatientMenu
             Address = address,
             LastName = lastName,
             FirstName = firstName,
-            Gender = (Gender)gender,
+            Gender = (Gender)int.Parse(gender),
             DateOfBirth = dateOfBirth,
             MedicalHistory = medicalHistory
         };

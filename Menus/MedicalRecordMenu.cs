@@ -15,10 +15,6 @@ public class MedicalRecordMenu
 
     private void Add()
     {
-        string medicalConditions = AnsiConsole.Ask<string>("[blue]MedicalConditions: [/]");
-        string medications = AnsiConsole.Ask<string>("[aqua]Medications: [/]");
-        string testResults = AnsiConsole.Ask<string>("[aqua]TestResults: [/]");
-        string treatmentPlans = AnsiConsole.Ask<string>("[aqua]TreatmentPlans: [/]");
         int patientId = AnsiConsole.Ask<int>("[aqua]PatientId: [/]");
         while (patientId <= 0)
         {
@@ -31,6 +27,10 @@ public class MedicalRecordMenu
             AnsiConsole.MarkupLine($"[red]Invalid input.[/]");
             doctorId = AnsiConsole.Ask<int>("[blue]DoctorId: [/]");
         }
+        string medicalConditions = AnsiConsole.Ask<string>("[blue]MedicalConditions: [/]");
+        string medications = AnsiConsole.Ask<string>("[aqua]Medications: [/]");
+        string testResults = AnsiConsole.Ask<string>("[aqua]TestResults: [/]");
+        string treatmentPlans = AnsiConsole.Ask<string>("[aqua]TreatmentPlans: [/]");
 
         var record = new MedicalRecord()
         {
@@ -86,10 +86,6 @@ public class MedicalRecordMenu
             AnsiConsole.MarkupLine($"[red]Invalid input.[/]");
             id = AnsiConsole.Ask<int>("[aqua]Id: [/]");
         }
-        string medicalConditions = AnsiConsole.Ask<string>("[blue]MedicalConditions: [/]");
-        string medications = AnsiConsole.Ask<string>("[aqua]Medications: [/]");
-        string testResults = AnsiConsole.Ask<string>("[aqua]TestResults: [/]");
-        string treatmentPlans = AnsiConsole.Ask<string>("[aqua]TreatmentPlans: [/]");
         int patientId = AnsiConsole.Ask<int>("[aqua]PatientId: [/]");
         while (patientId <= 0)
         {
@@ -102,6 +98,10 @@ public class MedicalRecordMenu
             AnsiConsole.MarkupLine($"[red]Invalid input.[/]");
             doctorId = AnsiConsole.Ask<int>("[blue]DoctorId: [/]");
         }
+        string medicalConditions = AnsiConsole.Ask<string>("[blue]MedicalConditions: [/]");
+        string medications = AnsiConsole.Ask<string>("[aqua]Medications: [/]");
+        string testResults = AnsiConsole.Ask<string>("[aqua]TestResults: [/]");
+        string treatmentPlans = AnsiConsole.Ask<string>("[aqua]TreatmentPlans: [/]");
 
         var record = new MedicalRecord()
         {

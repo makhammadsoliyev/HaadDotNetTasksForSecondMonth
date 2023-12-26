@@ -7,8 +7,6 @@ namespace HospitalInformationSystem.Menus;
 
 public class SelectionMenu
 {
-
-    #region Methods
     public Table DataTable(string title, params Patient[] patients)
     {
         var table = new Table();
@@ -20,9 +18,11 @@ public class SelectionMenu
         table.AddColumn("ID");
         table.AddColumn("FirstName");
         table.AddColumn("LastName");
+        table.AddColumn("Gender");
+        table.AddColumn("DateOfBirth");
         table.AddColumn("Phone");
-        table.AddColumn("Point");
-        table.AddColumn("Active Tasks");
+        table.AddColumn("Address");
+        table.AddColumn("MedicalHistory");
 
 
         foreach (var patient in patients)
@@ -110,6 +110,5 @@ public class SelectionMenu
 
         return selection;
     }
-    #endregion
 }
 
