@@ -1,2 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+//DateAndTime dateAndTime = new(1, 1, 1);
+
+Console.WriteLine();
